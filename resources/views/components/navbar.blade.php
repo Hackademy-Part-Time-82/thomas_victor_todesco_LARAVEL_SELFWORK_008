@@ -19,8 +19,8 @@
                         href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('books') ? 'active' : '' }}"
-                        href="{{ route('books') }}">Catalogo</a>
+                    <a class="nav-link {{ request()->routeIs('index') ? 'active' : '' }}"
+                        href="{{ route('index') }}">Catalogo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('register_your_book') ? 'active' : '' }}"

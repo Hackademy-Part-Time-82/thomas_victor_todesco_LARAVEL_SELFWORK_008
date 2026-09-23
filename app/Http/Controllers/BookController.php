@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookStoreRequest;
 use App\Mail\BookMail;
 use App\Models\Book;
 use Illuminate\Http\Request;
@@ -11,9 +12,9 @@ use Illuminate\Support\Facades\Mail;
 class BookController extends Controller
 {
 
-    public function books() {
+    public function index() {
         $books= Book::all();
-        return view ('books', [
+        return view ('index', [
             'books'=>$books
         ]);
     }
@@ -22,7 +23,7 @@ class BookController extends Controller
      return view ('register_book_form');
     }
 
-    public function store_book (Request $request) {
+    public function store_book (BookStoreRequest $request) {
         
         $request->validate(['name'=>['required']]);
 

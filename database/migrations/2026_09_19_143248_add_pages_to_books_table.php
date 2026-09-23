@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('pages')->nullable();
             $table->integer('year')->nullable();
+            $table->string('image')->nullable();
         });
     }
 
