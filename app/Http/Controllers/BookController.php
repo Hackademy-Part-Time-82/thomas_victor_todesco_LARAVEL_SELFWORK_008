@@ -33,6 +33,6 @@ class BookController extends Controller
             'pages'=>$request->input('pages')
             ]);
             Mail::to('tommytod93@gmail.com')->send(new BookMail($book));
-            return redirect()->route('register_your_book')->with('success', "Libro inserito correttamente in archivio");
+            return redirect()->route('store')->with('success', "Libro inserito correttamente in archivio");
             }
 }

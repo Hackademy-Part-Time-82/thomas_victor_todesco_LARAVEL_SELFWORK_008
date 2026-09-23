@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Override;
 
 class BookStoreRequest extends FormRequest
 {
@@ -24,11 +25,19 @@ class BookStoreRequest extends FormRequest
     {
         return [
 
-            'title'=>['required', 'max:30'],
-            'year'=>['required', 'max:10'],
-            'pages'=>['required', 'max:10'],
-            'image'=>['mimes:png,jpg'],
+            'title' => ['required', 'max:30'],
+            'year' => ['max:10'],
+            'pages' => ['max:10'],
+            'image' => ['mimes:png,jpg'],
 
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Titolo obbligatorio!',
+            'name.max' => 'Massimo 10 caratteri!',
         ];
     }
 }
