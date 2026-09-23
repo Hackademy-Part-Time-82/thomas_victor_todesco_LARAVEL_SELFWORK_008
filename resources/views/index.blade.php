@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <a class="btn btn-lumen" href="{{ route('register_your_book') }}">Registra un libro</a>
+                    <a class="btn btn-lumen" href="{{ route('create') }}">Registra un libro</a>
                 </div>
             </div>
         </div>

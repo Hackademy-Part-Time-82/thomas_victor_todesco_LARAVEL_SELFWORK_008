@@ -13,7 +13,7 @@
                     </p>
                     <div class="d-flex flex-wrap gap-2">
                         <a class="btn btn-lumen btn-lg px-4" href="{{ route('index') }}">Vedi il catalogo</a>
-                        <a class="btn btn-outline-light btn-lg px-4" href="{{ route('register_your_book') }}">
+                        <a class="btn btn-outline-light btn-lg px-4" href="{{ route('create') }}">
                             Aggiungi un titolo
                         </a>
                     </div>

@@ -19,8 +19,8 @@ class BookController extends Controller
         ]);
     }
 
-    public function register_your_book() {
-     return view ('register_book_form');
+    public function create() {
+     return view ('create');
     }
 
     public function store_book (BookStoreRequest $request) {
