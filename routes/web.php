@@ -14,5 +14,6 @@ Route::get('/register-your-book', [BookController::class, 'create'])->name('crea
 //questa rotta rimanda alla pagina con il form per la registrazione dei libri
 //rotta CREATE
 
-Route::post('/store-book', [BookController::class, 'store_book'])->name('store_book');
+Route::post('/store-book', [BookController::class, 'store'])->name('store');
 //rotta post per regisrare libro su DB
+//rotta POST
