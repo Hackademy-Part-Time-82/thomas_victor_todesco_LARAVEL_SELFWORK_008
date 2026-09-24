@@ -25,9 +25,9 @@ class BookStoreRequest extends FormRequest
     {
         return [
 
-            'title' => ['required', 'max:30'],
-            'year' => ['max:10'],
-            'pages' => ['max:10'],
+            'title' => ['required', 'max:100'],
+            'year' => ['max:100'],
+            'pages' => ['max:100'],
             'image' => ['mimes:png,jpg'],
 
         ];
@@ -36,8 +36,8 @@ class BookStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Titolo obbligatorio!',
-            'name.max' => 'Massimo 10 caratteri!',
+            'title.required' => 'Titolo obbligatorio!',
+            'title.max' => 'Massimo 100 caratteri!',
         ];
     }
 }

@@ -9,10 +9,10 @@
                     <div class="row justify-content-around gap-3">
                         @foreach ($books as $book)
                             <div class="card col-lg-3 p-2 text-center">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="{{$book->image ? Storage::url($book->image) : '\storage\covers\generic_cover.jpg'}}" class="card-img-top" alt="..." width="560" height="350">
                                 <div class="card-body border-black border-top">
-                                    <h5 class="card-title">{{ $book->name }}</h5>
-                                    <p class="card-text ">Pagine: {{ $book->pages ?? 'N/D' }}</p>
+                                    <h5 class="card-title">{{ $book->title }}</h5>
+                                    <p class="card-text">Pagine: {{ $book->pages ?? 'N/D' }}</p>
                                     <a href="#" class="btn btn-primary">Vai al dettaglio</a>
                                 </div>
                             </div>

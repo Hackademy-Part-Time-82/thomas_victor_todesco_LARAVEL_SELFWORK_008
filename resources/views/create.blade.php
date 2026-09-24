@@ -12,13 +12,14 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('store') }}" method="POST">
+                    <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-3">
-                            <label class="form-label" for="name">Titolo</label>
-                            <input class="form-control @error('name') is-invalid @enderror" id="name" type="text"
-                                placeholder="Titolo del libro" name="name" value="{{ old('name') }}">
+                            <label class="form-label" for="title">Titolo</label>
+                            <input class="form-control @error('title') is-invalid @enderror" id="title"
+                                type="text" placeholder="Titolo del libro" name="title"
+                                value="{{ old('title') }}">
                             @error('name')
                                 <div class="invalid-feedback">
                                     Il nome del libro è obbligatorio
@@ -34,8 +35,14 @@
 
                         <div class="mb-4">
                             <label class="form-label" for="pages">Pagine</label>
-                            <input class="form-control" id="pages" type="number"
-                                placeholder="Numero di pagine" name="pages" value="{{ old('pages') }}">
+                            <input class="form-control" id="pages" type="number" placeholder="Numero di pagine"
+                                name="pages" value="{{ old('pages') }}">
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label" for="image">Copertina</label>
+                            <input class="form-control" id="image" type="file" placeholder="Copertina del libro"
+                                name="image" value="">
                         </div>
 
                         <div class="d-flex flex-wrap justify-content-between gap-2">

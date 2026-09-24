@@ -17,3 +17,7 @@ Route::get('/register-your-book', [BookController::class, 'create'])->name('crea
 Route::post('/store-book', [BookController::class, 'store'])->name('store');
 //rotta post per regisrare libro su DB
 //rotta POST
+
+Route::get('/scheda-{libro}', [BookController::class, 'show'])->name('show');
+//rotta post per visualizzare scheda libro 
+//rotta SHOW
