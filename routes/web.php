@@ -18,6 +18,6 @@ Route::post('/store-book', [BookController::class, 'store'])->name('store');
 //rotta post per regisrare libro su DB
 //rotta POST
 
-Route::get('/scheda-{libro}', [BookController::class, 'show'])->name('show');
+Route::get('/scheda-{book}', [BookController::class, 'show'])->name('show');
 //rotta post per visualizzare scheda libro 
 //rotta SHOW
