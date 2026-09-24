@@ -16,15 +16,17 @@
                         @csrf
 
                         <div class="mb-3">
+
                             <label class="form-label" for="title">Titolo</label>
                             <input class="form-control @error('title') is-invalid @enderror" id="title"
                                 type="text" placeholder="Titolo del libro" name="title"
                                 value="{{ old('title') }}">
-                            @error('name')
+                            @error('title')
                                 <div class="invalid-feedback">
-                                    Il nome del libro è obbligatorio
+                                    {{ $message }}
                                 </div>
                             @enderror
+
                         </div>
 
                         <div class="mb-3">
