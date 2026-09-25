@@ -26,6 +26,18 @@
                     <a class="nav-link {{ request()->routeIs('create') ? 'active' : '' }}"
                         href="{{ route('create') }}">Registra un libro</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('create') ? 'active' : '' }}"
+                        href="{{ route('register') }}">Registrati</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('create') ? 'active' : '' }}"
+                    href="/login">Accedi</a>
+                </li>
+
+
             </ul>
         </div>
     </div>
