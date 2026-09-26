@@ -43,7 +43,7 @@
 
                 </div>
 
-                <div class="col-lg-8 d-lg-flex justify-content-center mt-3">
+                <div class="col-lg-8 d-lg-flex justify-content-center mt-3 gap-2">
                     @foreach ($books as $book)
                         <div class="card col-lg-3 p-1 text-center">
                             <img src="{{ $book->image ? Storage::url($book->image) : '\storage\covers\generic_cover.jpg' }}"
