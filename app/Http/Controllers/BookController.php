@@ -33,6 +33,7 @@ class BookController extends Controller
             'year'=>$request->input('year'),
             'pages'=>$request->input('pages'),
             'image'=>$path_image,
+            'user_id'=>auth()->user()->id,
             ]);
             //Mail::to('tommytod93@gmail.com')->send(new BookMail($book));
             return redirect()->route('create')->with('success', "Libro inserito correttamente in archivio");

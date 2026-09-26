@@ -61,7 +61,8 @@
 
                     <div class="mb-3">
                         <label for="exampleInputPassword2" class="form-label">Password Confirmation</label>
-                        <input type="password" class="form-control" id="exampleInputPassword2" name="password_confirmation">
+                        <input type="password" class="form-control" id="exampleInputPassword2"
+                            name="password_confirmation">
                         @error('password_confirmation')
                             <div class="alert alert-danger" role="alert">
                                 {{ $message }}
@@ -83,7 +84,7 @@
 
                     <div class="mb-3 form-check d-lg-flex justify-content-center">
                         <p>Sei già registrato?<a href="{{ route('login') }}"
-                                class="ms-1 btn btn-primary rounded-pill">Accedi</a></p>
+                        class="ms-1 btn btn-primary rounded-pill">Accedi</a></p>
 
                     </div>
 
