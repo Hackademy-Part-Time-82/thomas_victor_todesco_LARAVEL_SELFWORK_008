@@ -14,13 +14,24 @@
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Name</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            name="name" {{ old('name') }}">
+                            name="name" value="{{ old('name') }}">
                         @error('name')
                             <div class="alert alert-danger" role="alert">
                                 {{ $message }}
                             </div>
                         @enderror
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Surname</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            name="surname" vlaue="{{ old('surname') }}">
+                        @error('surname')
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
 
@@ -34,13 +45,13 @@
                                 {{ $message }}
                             </div>
                         @enderror
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
 
 
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" value="">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                            value="">
                         @error('password')
                             <div class="alert alert-danger" role="alert">
                                 {{ $message }}
@@ -49,9 +60,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword2" name="confirm_password">
-                        @error('confirm_password')
+                        <label for="exampleInputPassword2" class="form-label">Password Confirmation</label>
+                        <input type="password" class="form-control" id="exampleInputPassword2" name="password_confirmation">
+                        @error('password_confirmation')
                             <div class="alert alert-danger" role="alert">
                                 {{ $message }}
                             </div>
@@ -59,19 +70,20 @@
                     </div>
 
 
-{{--                     <div class="mb-3 form-check">
+                    {{--                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
  --}}
-                    
+
                     <div class="mb-3 form-check d-lg-flex justify-content-between">
                         <button type="submit" class="btn btn-success">Registrati</button>
                         <button type="reset" class="btn btn-danger">Reset campi</button>
                     </div>
 
                     <div class="mb-3 form-check d-lg-flex justify-content-center">
-                        <p>Sei già registrato?<a href="{{ route('login') }}" class="ms-1 btn btn-primary rounded-pill">Accedi</a></p>
+                        <p>Sei già registrato?<a href="{{ route('login') }}"
+                                class="ms-1 btn btn-primary rounded-pill">Accedi</a></p>
 
                     </div>
 

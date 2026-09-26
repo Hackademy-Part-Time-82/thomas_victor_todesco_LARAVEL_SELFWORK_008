@@ -28,12 +28,12 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('create') ? 'active' : '' }}"
+                    <a class="nav-link {{ request()->routeIs('register') ? 'active' : '' }}"
                         href="{{ route('register') }}">Registrati</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('create') ? 'active' : '' }}"
+                    <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}"
                     href="/login">Accedi</a>
                 </li>
 
